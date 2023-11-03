@@ -11,6 +11,11 @@ import { PaddingSize } from '@/utils/styling';
 export async function Page({ component, context }: ComponentProps) {
   return (
     <>
+            <UniformSlot
+        name="pageHeader"
+        data={component}
+        context={context}
+      />
       <UniformSlot
         name="pageContent"
         data={component}
@@ -38,6 +43,11 @@ export async function Page({ component, context }: ComponentProps) {
           );
         }}
       </UniformSlot>
+      <UniformSlot
+        name="pageFooter"
+        data={component}
+        context={context}
+      />
     </>
   );
 }

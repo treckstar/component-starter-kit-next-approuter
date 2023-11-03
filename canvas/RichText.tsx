@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import classNames from 'classnames';
 import { ComponentProps, UniformRichText, registerUniformComponent } from '@uniformdev/canvas-next-rsc';
-import Container from '../components/Container';
+import Container from '@/components/Container';
 import { PaddingSize } from '@/utils/styling';
 
 type RichTextProps = ComponentProps<{

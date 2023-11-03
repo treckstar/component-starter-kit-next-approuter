@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { appFonts } from '@/fonts';
 import { generateCustomTheme } from '@/utils/theme';
-import { getGlobalComponent } from '@/utils/global';
+import { getComponentById } from '@/utils/global';
 
 type ThemeValue = {
   themeName: Types.SupportedThemes;
@@ -13,8 +13,7 @@ const ThemeProvider = async ({
 }: {
   children: React.ReactNode;
 }) => {
-  const data = await getGlobalComponent();
-
+  const data = await getComponentById('e46c8336-acfd-43e8-ac59-8be8f4c33b7d');
   const font = data?.parameters?.font?.value as Types.SupportedFonts;
   const currentFont = appFonts[font];
 

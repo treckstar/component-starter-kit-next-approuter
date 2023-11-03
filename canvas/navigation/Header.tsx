@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { UniformSlot, ComponentProps, registerUniformComponent } from '@uniformdev/canvas-next-rsc';
 import { ScreenContainer } from '@/components/Container';
 import { getImageUrl } from '@/utils';
+import Logo from '@/components/Logo/Logo';
 
 type HeaderProps = ComponentProps<{
   logo: string | Types.CloudinaryImage;
@@ -66,17 +67,17 @@ const Header: FC<HeaderProps> = ({ logo, component, context, linksAlignment }) =
             </ul>
           </div>
           <Link className="ml-8 lg:ml-0" href="/">
-            <Image src={getImageUrl(logo)} width="270" height="43" alt="Uniform" />
-          </Link>
-          <div className={classNames('hidden lg:flex w-full', getLinksAlignment(linksAlignment))}>
-            <ul className="menu menu-horizontal px-1 shrink-0">
-              <UniformSlot
-                name="links"
-                data={component}
-                context={context}
-              />
-            </ul>
-          </div>
+          <Logo />
+        </Link>
+        <div className={classNames('hidden lg:flex w-full', getLinksAlignment(linksAlignment))}>
+          <ul className="menu menu-horizontal px-1 shrink-0">
+            <UniformSlot
+              name="links"
+              data={component}
+              context={context}
+            />
+          </ul>
+        </div>
         </div>
         <div className="hidden lg:flex">
           <UniformSlot

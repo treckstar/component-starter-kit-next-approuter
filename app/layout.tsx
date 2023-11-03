@@ -1,12 +1,11 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-import { UniformSlot, UniformSlotProps } from '@uniformdev/canvas-next-rsc';
+import { Inter, Recursive } from 'next/font/google'
 import ThemeProvider from '@/components/ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'] })
+const recursive = Recursive({ subsets: ['latin'] })
 
-import '../canvas'
-import { getGlobalComponent } from '@/utils/global';
+import '@/canvas'
 
 export const metadata = {
   title: 'Create Next App',
@@ -18,58 +17,14 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  void getGlobalComponent();
-
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={recursive.className}>
         {/* @ts-expect-error Server Component */}
         <ThemeProvider>
-          {/* @ts-expect-error Server Component */}
-          <Header />
-
           {children}
-
-          {/* @ts-expect-error Server Component */}
-          <Footer />
         </ThemeProvider>
       </body>
     </html>
-  )
-}
-
-const Header = async () => {
-  const globalComponent = await getGlobalComponent();
-
-  const context: UniformSlotProps<any>['context'] = {
-    composition: globalComponent,
-    path: 'global',
-    searchParams: {},
-  }
-
-  return (
-    <UniformSlot
-      name="header"
-      data={globalComponent}
-      context={context}
-    />
-  )
-}
-
-const Footer = async () => {
-  const globalComponent = await getGlobalComponent();
-
-  const context: UniformSlotProps<any>['context'] = {
-    composition: globalComponent,
-    path: 'global',
-    searchParams: {},
-  }
-
-  return (
-    <UniformSlot
-      name="footer"
-      data={globalComponent}
-      context={context}
-    />
   )
 }
