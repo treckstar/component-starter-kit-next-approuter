@@ -2318,6 +2318,37 @@
       "updated": "2023-07-19T23:46:36.653147+00:00"
     },
     {
+      "id": "markdown",
+      "name": "Markdown",
+      "icon": "format-text",
+      "parameters": [
+        {
+          "id": "markdownContent",
+          "name": "Markdown Content",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": false,
+            "multiline": true,
+            "linesCount": 10
+          }
+        }
+      ],
+      "categoryId": "94a7a423-8c09-4264-8495-c562c17d811e",
+      "previewImageUrl": "https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Rich_text_preview_image",
+      "useTeamPermissions": true,
+      "slots": [],
+      "canBeComposition": false,
+      "created": "2023-11-06T21:46:20.993821+00:00",
+      "updated": "2023-11-06T21:47:58.899017+00:00",
+      "variants": [
+        {
+          "id": "light",
+          "name": "Light"
+        }
+      ]
+    },
+    {
       "id": "menuSection",
       "name": "Menu Section",
       "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770719/component-starter-kit/component-icons/new/CSKicon_header_eu1k3o.svg",
