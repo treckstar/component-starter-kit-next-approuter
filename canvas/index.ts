@@ -18,6 +18,7 @@ import './Hero';
 import './Image';
 import './Spacer';
 import './RichText';
+import './Markdown';
 import './Review';
 import './Video';
 import './Page';
