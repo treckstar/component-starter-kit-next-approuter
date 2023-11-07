@@ -56,3 +56,9 @@ registerUniformComponent({
   type: 'page',
   component: Page as any,
 });
+
+
+registerUniformComponent({
+  type: 'articlePage',
+  component: Page as any,
+});
