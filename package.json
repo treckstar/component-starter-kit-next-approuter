@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -23,6 +23,7 @@
     "uniform:push": "run-s uniform:push:components uniform:push:compositions uniform:push:project-map-definitions uniform:push:project-map-nodes"
   },
   "dependencies": {
+    "@contentful/rich-text-from-markdown": "^15.16.8",
     "@contentful/rich-text-html-renderer": "^16.3.0",
     "@contentful/rich-text-types": "^16.3.0",
     "@uniformdev/canvas-next-rsc": "19.37.1-alpha.4",
