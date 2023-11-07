@@ -20,7 +20,6 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={recursive.className}>
-        {/* @ts-expect-error Server Component */}
         <ThemeProvider>
           {children}
         </ThemeProvider>
