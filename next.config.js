@@ -4,9 +4,6 @@ const { withUniformConfig } = require('@uniformdev/canvas-next-rsc/config');
 const nextConfig = {
   output: 'standalone',
   reactStrictMode: true,
-  experimental: {
-    esmExternals: false,
-  },
   publicRuntimeConfig: {
     projectId: process.env.UNIFORM_PROJECT_ID,
     applicationId: process.env.ALGOLIA_APPLICATION_ID,
